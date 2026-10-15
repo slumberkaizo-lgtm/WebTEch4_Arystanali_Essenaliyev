@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 4. Registration form</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav aria-label="Tasks">
+    <a href="index.html">Task 0</a>
+    <a href="html5.html">Task 1</a>
+    <a href="bootstrap.html">Task 2</a>
+    <a href="validation.html">Task 3</a>
+    <a href="registration.html" aria-current="page">Task 4</a>
+  </nav>
+  <main>
+    <h1>Task 4. Registration form</h1>
+    <p>Registration paragraph</p>
+    <form id="registration-form" class="row g-3 css-validation" action="success.html" method="get">
+      <div class="col-md-6">
+        <label for="first-name" class="form-label">First name</label>
+        <input type="text" class="form-control" id="first-name" name="first-name" placeholder="Alex" required minlength="2" maxlength="50" aria-describedby="first-name-error first-name-success">
+        <div class="invalid-feedback" id="first-name-error">Enter a first name of 2–50 characters.</div>
+        <div class="valid-feedback" id="first-name-success">Looks good!</div>
+      </div>
+      <div class="col-md-6">
+        <label for="last-name" class="form-label">Last name</label>
+        <input type="text" class="form-control" id="last-name" name="last-name" placeholder="Johnson" required minlength="2" maxlength="50" aria-describedby="last-name-error last-name-success">
+        <div class="invalid-feedback" id="last-name-error">Enter a last name of 2–50 characters.</div>
+        <div class="valid-feedback" id="last-name-success">Looks good!</div>
+      </div>
+      <div class="col-12">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="alex@example.com" required maxlength="100" aria-describedby="email-error email-success">
+        <div class="invalid-feedback" id="email-error">Enter a valid email address.</div>
+        <div class="valid-feedback" id="email-success">Looks good!</div>
+      </div>
+      <div class="col-md-6">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="At least 8 characters" required minlength="8" maxlength="64" aria-describedby="password-error password-success password-help">
+        <div class="form-text" id="password-help">Use between 8 and 64 characters.</div>
+        <div class="invalid-feedback" id="password-error">Use 8–64 characters.</div>
+        <div class="valid-feedback" id="password-success">Looks good!</div>
+      </div>
+      <div class="col-md-6">
+        <label for="confirm-password" class="form-label">Confirm password</label>
+        <input type="password" class="form-control" id="confirm-password" placeholder="Repeat your password" required minlength="8" maxlength="64" aria-describedby="confirm-password-error confirm-password-success confirm-password-help">
+        <div class="form-text" id="confirm-password-help">Repeat your password.</div>
+        <div class="invalid-feedback" id="confirm-password-error">Use 8–64 characters.</div>
+        <div class="valid-feedback" id="confirm-password-success">Looks good!</div>
+      </div>
+      <fieldset class="col-12">
+        <legend class="form-label">Gender</legend>
+        <div class="choices">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gender" id="female" value="female" required aria-describedby="gender-error">
+            <label class="form-check-label" for="female">Female</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gender" id="male" value="male" required aria-describedby="gender-error">
+            <label class="form-check-label" for="male">Male</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gender" id="prefer-not-to-say" value="prefer-not-to-say" required aria-describedby="gender-error">
+            <label class="form-check-label" for="prefer-not-to-say">Prefer not to say</label>
+          </div>
+        </div>
+        <div id="gender-error" class="gender-feedback text-danger small mt-2">Please choose an option.</div>
+      </fieldset>
+      <fieldset class="col-12">
+        <legend class="form-label">Hobbies <span class="optional">optional</span></legend>
+        <div class="choices">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="hobbies" id="coding" value="coding">
+            <label class="form-check-label" for="coding">Coding</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="hobbies" id="reading" value="reading">
+            <label class="form-check-label" for="reading">Reading</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="hobbies" id="sports" value="sports">
+            <label class="form-check-label" for="sports">Sports</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="hobbies" id="music" value="music">
+            <label class="form-check-label" for="music">Music</label>
+          </div>
+        </div>
+      </fieldset>
+      <div class="col-12">
+        <label for="country" class="form-label">Country</label>
+        <select class="form-select" id="country" name="country" required aria-describedby="country-error country-success">
+          <option value="">Select your country</option>
+          <option value="KZ">Kazakhstan</option>
+          <option value="KG">Kyrgyzstan</option>
+          <option value="UZ">Uzbekistan</option>
+          <option value="RU">Russia</option>
+          <option value="TR">Türkiye</option>
+          <option value="US">United States</option>
+          <option value="other">Other</option>
+        </select>
+        <div class="invalid-feedback" id="country-error">Please select your country.</div>
+        <div class="valid-feedback" id="country-success">Looks good!</div>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="reset" class="btn btn-outline-secondary">Reset</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

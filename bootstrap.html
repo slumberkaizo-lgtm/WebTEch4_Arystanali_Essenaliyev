@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 2. Bootstrap form</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav aria-label="Tasks">
+    <a href="index.html">Task 0</a>
+    <a href="html5.html">Task 1</a>
+    <a href="bootstrap.html" aria-current="page">Task 2</a>
+    <a href="validation.html">Task 3</a>
+    <a href="registration.html">Task 4</a>
+  </nav>
+  <main>
+    <h1>Task 2. Bootstrap form</h1>
+    <p>Contact paragraph</p>
+    <form id="contact-form" class="row g-3" action="success.html" method="get">
+      <div class="col-md-6">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" id="name" name="name" class="form-control" required minlength="2" maxlength="50" aria-describedby="name-help" placeholder="Alex Johnson">
+        <div class="form-text" id="name-help">Between 2 and 50 characters.</div>
+      </div>
+      <div class="col-md-6">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" id="email" name="email" class="form-control" required maxlength="100" aria-describedby="email-help" placeholder="alex@example.com">
+        <div class="form-text" id="email-help">Use an address like alex@example.com.</div>
+      </div>
+      <div class="col-12">
+        <label for="message" class="form-label">Message</label>
+        <textarea id="message" name="message" class="form-control" required minlength="10" maxlength="500" aria-describedby="message-help" rows="5" placeholder="Message text"></textarea>
+        <div class="form-text" id="message-help">Between 10 and 500 characters.</div>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

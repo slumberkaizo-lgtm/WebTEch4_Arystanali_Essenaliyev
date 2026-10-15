@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 0. Contact form</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav aria-label="Tasks">
+    <a href="index.html" aria-current="page">Task 0</a>
+    <a href="html5.html">Task 1</a>
+    <a href="bootstrap.html">Task 2</a>
+    <a href="validation.html">Task 3</a>
+    <a href="registration.html">Task 4</a>
+  </nav>
+  <main>
+    <h1>Task 0. Contact form</h1>
+    <p>Contact paragraph</p>
+    <form id="contact-form" class="simple-form" action="success.html" method="get">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Alex Johnson">
+      </div>
+      <div>
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" placeholder="alex@example.com">
+      </div>
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Message text"></textarea>
+      </div>
+      <div class="basic-actions">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

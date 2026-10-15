@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 1. HTML5 validation</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav aria-label="Tasks">
+    <a href="index.html">Task 0</a>
+    <a href="html5.html" aria-current="page">Task 1</a>
+    <a href="bootstrap.html">Task 2</a>
+    <a href="validation.html">Task 3</a>
+    <a href="registration.html">Task 4</a>
+  </nav>
+  <main>
+    <h1>Task 1. HTML5 validation</h1>
+    <p>Validation paragraph</p>
+    <form id="contact-form" class="simple-form" action="success.html" method="get">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required minlength="2" maxlength="50" aria-describedby="name-help" placeholder="Alex Johnson">
+        <div class="form-text" id="name-help">Between 2 and 50 characters.</div>
+      </div>
+      <div>
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" required maxlength="100" aria-describedby="email-help" placeholder="alex@example.com">
+        <div class="form-text" id="email-help">Use an address like alex@example.com.</div>
+      </div>
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required minlength="10" maxlength="500" aria-describedby="message-help" rows="5" placeholder="Message text"></textarea>
+        <div class="form-text" id="message-help">Between 10 and 500 characters.</div>
+      </div>
+      <div class="basic-actions">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

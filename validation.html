@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 3. Validation styles</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav aria-label="Tasks">
+    <a href="index.html">Task 0</a>
+    <a href="html5.html">Task 1</a>
+    <a href="bootstrap.html">Task 2</a>
+    <a href="validation.html" aria-current="page">Task 3</a>
+    <a href="registration.html">Task 4</a>
+  </nav>
+  <main>
+    <h1>Task 3. Validation styles</h1>
+    <p>Validation paragraph</p>
+    <form id="contact-form" class="row g-3 css-validation" action="success.html" method="get">
+      <div class="col-md-6">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" id="name" name="name" class="form-control" required minlength="2" maxlength="50" aria-describedby="name-error name-success" placeholder="Alex Johnson">
+        <div class="invalid-feedback" id="name-error">Enter your name (2–50 characters).</div>
+        <div class="valid-feedback" id="name-success">Looks good!</div>
+      </div>
+      <div class="col-md-6">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" id="email" name="email" class="form-control" required maxlength="100" aria-describedby="email-error email-success" placeholder="alex@example.com">
+        <div class="invalid-feedback" id="email-error">Email is required. Enter a valid email address.</div>
+        <div class="valid-feedback" id="email-success">Looks good!</div>
+      </div>
+      <div class="col-12">
+        <label for="message" class="form-label">Message</label>
+        <textarea id="message" name="message" class="form-control" required minlength="10" maxlength="500" aria-describedby="message-error message-success" rows="5" placeholder="Message text"></textarea>
+        <div class="invalid-feedback" id="message-error">Enter a message of 10–500 characters.</div>
+        <div class="valid-feedback" id="message-success">Looks good!</div>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+    <section class="validation-example" aria-labelledby="example-title">
+      <h2 id="example-title">Validation examples</h2>
+      <label for="valid-example" class="form-label">Valid email example</label>
+      <input id="valid-example" class="form-control is-valid" type="email" value="alex@example.com" readonly aria-describedby="valid-example-help">
+      <div id="valid-example-help" class="valid-feedback">Looks good!</div>
+      <label for="invalid-example" class="form-label mt-3">Invalid email example</label>
+      <input id="invalid-example" class="form-control is-invalid" type="email" value="not-an-email" readonly aria-invalid="true" aria-describedby="invalid-example-help">
+      <div id="invalid-example-help" class="invalid-feedback">Enter a valid email address.</div>
+    </section>
+  </main>
+</body>
+</html>
